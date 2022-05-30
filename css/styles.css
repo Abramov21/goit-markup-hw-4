@@ -164,8 +164,11 @@ ul{
 
 .contact-link {
   color: var(--second-color);
-  display: block;
-
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav-link:hover,
@@ -179,7 +182,7 @@ ul{
 .contact-icon{
   fill: var(--second-color);
   margin-right: 10px;
-  /* display: block; */
+  display: block;
 }
 
 .contact-link:hover .contact-icon,
@@ -359,19 +362,10 @@ padding-bottom: 94px;
 } */
 
 .team-desc{
-  display: block;
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  /* margin-left: auto;
-  margin-right: auto; */
-  max-width: 270px;
-
-  border-bottom: 1px solid #EEEEEE;
-  border-right: 1px solid #EEEEEE;
-  border-left: 1px solid #EEEEEE;
   background: var(--primary-white-color);
-  width: 370px;
 }
 
 .team-name{
@@ -462,13 +456,23 @@ padding-bottom: 94px;
   fill: #AFB1B8;
 }
 
-.clients-item:hover {
+.clients-item:hover,
+.clients-item:focus {
   border: 1px solid #2196f3;
   fill: var(--accent-color);
 }
 
 
 .clients-item:hover .clients-svg{
+  fill: var(--accent-color);
+}
+
+.link-clients:focus .clients-svg{
+  fill: var(--accent-color);
+}
+
+.link-clients:focus {
+  border: 1px solid #2196f3;
   fill: var(--accent-color);
 }
 
@@ -497,6 +501,7 @@ padding-bottom: 94px;
 
 .footer-conteiner{
   display: flex;
+  align-items: baseline;
 }
 
 .footer .list{
@@ -513,7 +518,9 @@ padding-bottom: 0px;
   color: var(--primary-white-color);
   margin-bottom: 0;
   padding-top: 0;
+  padding-bottom: 0;
   margin-right: 0;
+  margin-bottom: 20px;
 }
 
 .footer-adress{
@@ -526,6 +533,8 @@ padding-bottom: 0px;
   font-style: normal ;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .footer-social{
@@ -538,6 +547,8 @@ padding-bottom: 0px;
   justify-content: space-around;
 } */
 
+
+
 .footer .social-link{
   display: flex;
   justify-content: center;
@@ -546,7 +557,15 @@ padding-bottom: 0px;
   height: 44px;
   border-radius: 50%;
   color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
+
+.footer .social-link:hover,
+.footer .social-link:focus{
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
 
 .footer .section-title{
   margin-bottom: 20px;
@@ -579,7 +598,6 @@ padding-bottom: 0px;
   display: flex;
   justify-content: center;
   padding-bottom: 0;
-  padding: 6px 22px;
 }
 
 .works-buttons .works-item:first-child{
@@ -602,6 +620,7 @@ padding-bottom: 0px;
 
 
 .works-buttons .bth{
+  padding: 6px 22px;
   color: var(--primary-color);
   cursor: pointer;
   background: #F5F4FA;
